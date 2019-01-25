@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <<link rel="stylesheet" href="js/js.js">
+	<title>HTML & CSS DOCUMENT</title>
+</head>
+
+
+ <!--Navigation bar-->
+<nav id="navbar">
+  <header>HTML & CSS DOCUMENT</header>
+  <ul> 
+    <a class="nav-link" href="#Introduction" rel="internal"><li>Introduction</li></a>
+    <a class="nav-link" href="#objectives" rel="internal"><li>Objectives:</li></a>
+    <a class="nav-link" href="#prerequisites" rel="internal"><li>Prerequisites:</li></a>
+    <a class="nav-link" href="#What is an HTML File?" rel="internal"><li>What is an HTML File?</li></a>
+    <a class="nav-link" href="#HTM or HTML Extension?" rel="internal"><li>HTM or HTML Extension?</li></a>
+    <a class="nav-link" href="#How to View HTML Source" rel="internal"><li>How to View HTML Source</li></a>
+    <a class="nav-link" href="#Variable_scope" rel="internal"><li>#</li></a>
+    <a class="nav-link" href="#Global_variables" rel="internal"><li>#</li></a>
+    <a class="nav-link" href="#Constants" rel="internal"><li>#</li></a>
+    <a class="nav-link" href="#Data_types" rel="internal"><li></li></a>
+    <a class="nav-link" href="#if...else_statement" rel="internal"><li>if...else statement</li></a>
+    <a class="nav-link" href="#while_statement" rel="internal"><li>while statement</li></a>
+    <a class="nav-link" href="#Function_declarations" rel="internal"><li>Function declarations</li></a>
+    <a class="nav-link" href="#Reference" rel="internal"><li>Reference</li></a>
+  </ul>
+</nav>
+<!--End Navigation bar-->
+
+<!--Body-->
+
+<!--introduction-->
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+    <h3>HTML Basics</h3>
+    <article>  
+      <p>Welcome to HTML Basics. This workshop leads you through the basics of Hyper Text Markup Language (HTML). HTML is the building block for web      pages. You will learn to use HTML to author an HTML page to display in a web browser.</p>
+<!--
+      <p></p>
+      
+
+-->
+      </artice>
+    </section>
+  <!--End introduction-->
+  
+  <!--Objectives:-->
+  <section class="main-section" id="objectives">
+    <header>Objectives:</header>
+    <article>
+      <p>By the end of this workshop, you will be able to:</p>
+
+          <li>Use a text editor to author an HTML document.</li>
+          <li>Be able to use basic tags to denote paragraphs, emphasis or special type.</li>
+          <li>Creative hyperlinks to other documents.</li>
+          <li>Create an email link,</li>
+          <li>Add images to your document.</li>
+          <li>Use a table for layout.</li>
+          <li>Apply colors to your HTML document.</li>
+      </artice>
+    </section>
+  
+  <!--End Objectives:-->
+  
+  <!--prerequisites-->
+  <section class="main-section" id="prerequisites">
+    <header>Prerequisites:</header>
+    <article>
+    <p>You will need a text editor, such as Notepad and an Internet browser, such as Internet Explorer or Netscape.<br />
+      <b>Q: </b>What is Notepad and where do I get it?<br />
+      <b>A: </b>Notepad is the default Windows text editor. On most Windows systems, click your Start button
+      and choose Programs then Accessories. It should be a little blue notebook.
+      </p>
+
+      <p><b>Mac Users: </b>Simple Text is the default text editor on the mac. In OSX use TextEdit and change the following 
+      preferences: Select (in the preference window) Plain text instead of Rich text and then select Ignore rich text commands in HTML files. This is very important because if you don't do this HTML
+codes probably won't work.</p>
+      
+<p>One thing you should avoid using is a word processor (like Microsoft Word) for authoring your HTML  documents.</p>
+    </article>
+    </section>
+  <!--End prerequisites-->
+  tmltag
+  <!--what is an HTML File?-->
+  <section class="main-section" id="What is an HTML File?">
+    <header>What is an HTML File?</header>
+    <article> 
+<p>HTML is a format that tells a computer how to display a web page. The documents themselves are plain text files with special "tags" or codes that a web browser uses to interpret and display information  on your computer screen.</p>
+      
+      <ul>
+        <li>HTML stands for Hyper Markup Language </li>
+        <li>An HTML file is a text file containing markup tags </li>
+        <li>The markup tags tell the web browser how to display the page</li>
+        <li>An HTML file must have an htm or html file extension</li>
+      </ul>
+      
+      <h4><b>Try it?</b></h4>
+      <p>Open your text editor and type the following text:</p>
+
+  <xmp>
+ <html> 
+  <head> 
+    <title>My First Webpage</title>  
+  </head>  
+  <body> 
+    This is my first homepage. <b>This text is bold</b>  
+  </body>  
+</html> 
+    </xmp>
+
+
+      <p>
+        Save the file as <b>mypage.html.</b> Start yuour Internet browser. Select 
+        <b>Open </b>(or Open Page) in the <b>File </b>menu of yuor browser. A
+        dialog box will appear. Select <b>Browser</b> (or Choose File) and locate 
+        the html file you just created - <b>mypage.html</b> - select it click 
+        <b>Open</b>. Now you should see an address in the dialog box, for example 
+        <b>C:\MyDocuments\mypage.html.</b> Click <b>OK</b>,
+        and the browser will display the page. To view how the page should look,
+        visit this web page: <b>http://profdevtrain.austincc.edu/html/mypage.html</b>
+      </p>
+      
+      <h4><b>Example Explained</b></h4>
+      <p>
+        What you just made is a skeleton html document. This the minimum required 
+        information for a web document and all web documents should contain these 
+        basic components. The first tag in your html document is 
+        <xmp><html></xmp>
+        This tag tells your browser that this is the start of an html document.
+        The last tag in your document is 
+          <xmp></html></xmp>
+        This tag tells your browser that this is the end of the html document.
+      </p>
+      <p>
+        The text between the 
+        <xmp><head></head></xmp>
+        tag is header information. Header information is not displayed in the 
+        browser window.
+      </p>
+      <p>
+        The text between the 
+        <xmp><title></title></xmp>
+          tags is the title of your document. The
+          tag is used to uniquely identify each document and is also displayed in
+        the title bar of the browser window.
+      </p>
+      <p>
+        The text between the 
+        <xmp><body></body></xmp>
+        tags are the text that will be display in your browser.
+      </p>
+      <p>
+        The text between the 
+        <xmp><b></b></xmp>
+        tags will be displayed in a bold font.
+      </p>
+    </article>
+    </section>
+  <!-- End what is an HTML File?-->
+  
+  <!--HTM or HTML Extension?-->
+  <section class="main-section" id="HTM or HTML Extension?">
+    <header>HTM or HTML Extension?</header>
+    <p>
+      When you save an HTML file, you can use either the htm or html extension.
+      The htm extension comes from the past when some of the commonly used software
+      only allowed three letter extensions. It is perfectly safe to use either 
+      .htm, but be consistent. <b>mypage.htm</b> and mypage.html are treated as
+      different files by browser.
+    </p>
+   
+    </section>
+  <!--End HTM or HTML Extension?-->
+
+  <!--How to View HTML Source-->
+  <section class="main-section" id="How to View HTML Source">
+    <header>How to View HTML Source</header>
+    <article>
+      <p>
+        A good way to learn HTML is to look at how other people have coded their html pages. To find out, simply click on the View option in your browsers toolbar and select Source. This will open a 
+        window that shows you the actual HTML of the page. Go ahead and view the source html for this page.
+      </p>
+    </article>
+    </section>
+  <!--How HTM or HTML Extension? -->
+  <section class="main-section" id="HTML Tags">
+    <header>Variable scope</header>
+    <article>
+     <p> When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.</p>
+
+<p>JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a block is local to the function (or global scope) that the block resides within. For example the following code will log 5, because the scope of x is the function (or global context) within which x is declared, not the block, which in this case is an if statement.</p>
+<code>if (true) {
+  var x = 5;
+}
+console.log(x);  // 5</code>
+      <p>This behavior changes, when using the let declaration introduced in ECMAScript 2015.</p>
+
+<code>if (true) {
+  let y = 5;
+}
+console.log(y);  
+// ReferenceError: y is not defined
+</code>
+    </article>
+    </section>
+  <section class="main-section" id="Global_variables">
+    <header>Global variables</header>
+    <article>
+<p>Global variables are in fact properties of the global object. In web pages the global object is window, so you can set and access global variables using the window.variable syntax.</p>
+
+<p>Consequently, you can access global variables declared in one window or frame from another window or frame by specifying the window or frame name. For example, if a variable called phoneNumber is declared in a document, you can refer to this variable from an iframe as parent.phoneNumber.</p>
+    </article>
+    </section>
+  <section class="main-section" id="Constants">
+    <header>Constants</header>
+    <article>
+<p>You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.</p>
+
+      <code>const PI = 3.14;</code>
+<p>A constant cannot change value through assignment or be re-declared while the script is running. It has to be initialized to a value.</p>
+
+<p>The scope rules for constants are the same as those for let block scope variables. If the const keyword is omitted, the identifier is assumed to represent a variable.</p>
+
+<p>You cannot declare a constant with the same name as a function or variable in the same scope. For example:</p>
+
+<code>// THIS WILL CAUSE AN ERROR
+function f() {};
+const f = 5;
+// THIS WILL CAUSE AN ERROR ALSO
+function f() {
+  const g = 5;
+  var g;
+  //statements
+}</code>
+However, object attributes are not protected, so the following statement is executed without problems.
+<code>const MY_OBJECT = {"key": "value"};
+MY_OBJECT.key = "otherValue";</code>
+    </article>
+    </section>
+  <section class="main-section" id="Data_types">
+    <header>Data types</header>
+    <article>
+      <p>The latest ECMAScript standard defines seven data types:</p>
+      <li><p>Six data types that are primitives:</p>
+<ul>
+  <li>Boolean. true and false.</li>
+<li>null. A special keyword denoting a null value. Because JavaScript is case-sensitive, null is not the same as Null, NULL, or any other variant.</li>
+  <li>undefined. A top-level property whose value is undefined.</li>
+<li>Number. 42 or 3.14159.</li>
+  <li>String. "Howdy"</li>
+        <li>Symbol (new in ECMAScript 2015). A data type whose instances are unique and immutable.</li></ul>
+      <li>and Object</li>
+Although these data types are a relatively small amount, they enable you to perform useful functions with your applications. Objects and functions are the other fundamental elements in the language. You can think of objects as named containers for values, and functions as procedures that your application can perform.
+    </article>
+    </section>
+  <section class="main-section" id="if...else_statement">
+    <header>if...else statement</header>
+    <article>
+Use the if statement to execute a statement if a logical condition is true. Use the optional else clause to execute a statement if the condition is false. An if statement looks as follows:
+
+<code>if (condition) {
+  statement_1;
+} else {
+  statement_2;
+}</code>
+condition can be any expression that evaluates to true or false. See Boolean for an explanation of what evaluates to true and false. If condition evaluates to true, statement_1 is executed; otherwise, statement_2 is executed. statement_1 and statement_2 can be any statement, including further nested if statements.
+<p>
+You may also compound the statements using else if to have multiple conditions tested in sequence, as follows:
+      </p>
+<code>if (condition_1) {
+  statement_1;
+} else if (condition_2) {
+  statement_2;
+} else if (condition_n) {
+  statement_n;
+} else {
+  statement_last;
+} </code>
+In the case of multiple conditions only the first logical condition which evaluates to true will be executed. To execute multiple statements, group them within a block statement ({ ... }) . In general, it's good practice to always use block statements, especially when nesting if statements:
+
+<code>if (condition) {
+  statement_1_runs_if_condition_is_true;
+  statement_2_runs_if_condition_is_true;
+} else {
+  statement_3_runs_if_condition_is_false;
+  statement_4_runs_if_condition_is_false;
+}</code>
+It is advisable to not use simple assignments in a conditional expression, because the assignment can be confused with equality when glancing over the code. For example, do not use the following code:
+<code>if (x = y) {
+  /* statements here */
+}</code>
+If you need to use an assignment in a conditional expression, a common practice is to put additional parentheses around the assignment. For example:
+
+<code>if ((x = y)) {
+  /* statements here */
+}</code>
+    </article>
+    </section>
+  <section class="main-section" id="while_statement">
+    <header>while statement</header>
+    <article>
+A while statement executes its statements as long as a specified condition evaluates to true. A while statement looks as follows:
+
+<code>while (condition)
+  statement</code>
+If the condition becomes false, statement within the loop stops executing and control passes to the statement following the loop.
+
+<p>The condition test occurs before statement in the loop is executed. If the condition returns true, statement is executed and the condition is tested again. If the condition returns false, execution stops and control is passed to the statement following while.</p>
+
+      <p>To execute multiple statements, use a block statement ({ ... }) to group those statements.</p>
+
+Example:
+
+      <p>The following while loop iterates as long as n is less than three:</p>
+
+<code>var n = 0;
+var x = 0;
+while (n < 3) {
+  n++;
+  x += n;
+}</code>
+<p>With each iteration, the loop increments n and adds that value to x. Therefore, x and n take on the following values:</p>
+
+<li>After the first pass: n = 1 and x = 1</li>
+<li>After the second pass: n = 2 and x = 3</li>
+<li>After the third pass: n = 3 and x = 6</li>
+ <p>After completing the third pass, the condition n &lt 3 is no longer true, so the loop terminates.</p>
+    </article>
+    </section>
+  <section class="main-section" id="Function_declarations">
+    <header>Function declarations</header>
+    <article> 
+A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:
+
+      <li>The name of the function.</li>
+      <li>A list of arguments to the function, enclosed in parentheses and separated by commas.</li>
+      <li>The JavaScript statements that define the function, enclosed in curly brackets, { }.</li>
+      <p>For example, the following code defines a simple function named square:</P>
+
+<code>function square(number) {
+  return number * number;
+}</code>
+<p>The function square takes one argument, called number. The function consists of one statement that says to return the argument of the function (that is, number) multiplied by itself. The return statement specifies the value returned by the function.
+    </p>
+    <code>return number * number;</code>
+<p>Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, but if the function changes the value of the parameter, this change is not reflected globally or in the calling function.</p>
+    </article>
+    </section>
+  <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      <li>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">MDN</a>
+    </article>
+    </section>
+</main>
+
+</html>
