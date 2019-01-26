@@ -18,8 +18,8 @@
     <a class="nav-link" href="#What is an HTML File?" rel="internal"><li>What is an HTML File?</li></a>
     <a class="nav-link" href="#HTM or HTML Extension?" rel="internal"><li>HTM or HTML Extension?</li></a>
     <a class="nav-link" href="#How to View HTML Source" rel="internal"><li>How to View HTML Source</li></a>
-    <a class="nav-link" href="#Variable_scope" rel="internal"><li>#</li></a>
-    <a class="nav-link" href="#Global_variables" rel="internal"><li>#</li></a>
+    <a class="nav-link" href="#HTML Tags" rel="internal"><li>HTML Tags</li></a>
+    <a class="nav-link" href="#Logical vs. Physical Tags " rel="internal"><li>Logical vs. Physical Tags </li></a>
     <a class="nav-link" href="#Constants" rel="internal"><li>#</li></a>
     <a class="nav-link" href="#Data_types" rel="internal"><li></li></a>
     <a class="nav-link" href="#if...else_statement" rel="internal"><li>if...else statement</li></a>
@@ -39,11 +39,7 @@
     <h3>HTML Basics</h3>
     <article>  
       <p>Welcome to HTML Basics. This workshop leads you through the basics of Hyper Text Markup Language (HTML). HTML is the building block for web      pages. You will learn to use HTML to author an HTML page to display in a web browser.</p>
-<!--
-      <p></p>
-      
 
--->
       </artice>
     </section>
   <!--End introduction-->
@@ -188,57 +184,53 @@ codes probably won't work.</p>
     </section>
   <!--How HTM or HTML Extension? -->
   <section class="main-section" id="HTML Tags">
-    <header>Variable scope</header>
+    <h1><center>HTML Tags</center></h1>
+    <header>What are HTML tags? </header>
     <article>
-     <p> When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.</p>
-
-<p>JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a block is local to the function (or global scope) that the block resides within. For example the following code will log 5, because the scope of x is the function (or global context) within which x is declared, not the block, which in this case is an if statement.</p>
-<code>if (true) {
-  var x = 5;
-}
-console.log(x);  // 5</code>
-      <p>This behavior changes, when using the let declaration introduced in ECMAScript 2015.</p>
-
-<code>if (true) {
-  let y = 5;
-}
-console.log(y);  
-// ReferenceError: y is not defined
-</code>
+        <ul>
+          <li>HTML tags are used to mark-up HTML elements  </li>
+          <li>HTML tags are surrounded by the two characters <xmp> <and> </xmp></li>
+          <li>The surrounding characters are called angle brackets </li>
+          <li>HTML tags normally come in pairs like<xmp> <b> and </b></xmp></li>
+          <li>The first tag in a pair is the start tag, the second tag is the end tag </li>
+          <li>The text between the start and end tags is the element content </li>
+          <li>HTML tags are not case sensitive,<xmp> <b> means the same as <B></xmp></li>
+        </ul>
     </article>
     </section>
-  <section class="main-section" id="Global_variables">
-    <header>Global variables</header>
+  <section class="main-section" id="Logical vs. Physical Tags ">
+    <header>Logical vs. Physical Tags </header>
     <article>
-<p>Global variables are in fact properties of the global object. In web pages the global object is window, so you can set and access global variables using the window.variable syntax.</p>
+        <p>In HTML there are both logical tags and physical tags. Logical tags are designed to describe (to the browser) the enclosed text's meaning. An example of a logical tag is the <xmp><strong> </strong></xmp> tag. By placing text in between these tags you are telling the browser that the text has some greater importance. By default all browsers make the text appear bold when in between the<xmp> <strong> and </strong></xmp> tags. </p>
 
-<p>Consequently, you can access global variables declared in one window or frame from another window or frame by specifying the window or frame name. For example, if a variable called phoneNumber is declared in a document, you can refer to this variable from an iframe as parent.phoneNumber.</p>
+        <p>Physical tags on the other hand provide specific instructions on how to display the text they enclose. Examples of physical tags include:  </p>
+        <ul>
+          <li><xmp><b>:</xmp>Makes the text bold.</li>
+            <li><xmp><big>:</xmp> Makes the text usually one size bigger than what's around it. </li>
+              <li><xmp><i>:</xmp> Makes text italic.</li>
+        </ul>
+
+        <p>Physical tags were invented to add style to HTML pages because style sheets were not around, though the original intention of HTML was to not have physical tags. ther than use physical tags to style your HTML pages, you should use style sheets</p>
     </article>
     </section>
+
+    <!--
   <section class="main-section" id="Constants">
     <header>Constants</header>
     <article>
-<p>You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.</p>
+      <p>You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.</p>
 
-      <code>const PI = 3.14;</code>
-<p>A constant cannot change value through assignment or be re-declared while the script is running. It has to be initialized to a value.</p>
+          <code>const PI = 3.14;</code>
+      <p>A constant cannot change value through assignment or be re-declared while the script is running. It has to be initialized to a value.</p>
 
-<p>The scope rules for constants are the same as those for let block scope variables. If the const keyword is omitted, the identifier is assumed to represent a variable.</p>
+      <p>The scope rules for constants are the same as those for let block scope variables. If the const keyword is omitted, the identifier is assumed to represent a variable.</p>
 
-<p>You cannot declare a constant with the same name as a function or variable in the same scope. For example:</p>
+      <p>You cannot declare a constant with the same name as a function or variable in the same scope. For example:</p>
 
-<code>// THIS WILL CAUSE AN ERROR
-function f() {};
-const f = 5;
-// THIS WILL CAUSE AN ERROR ALSO
-function f() {
-  const g = 5;
-  var g;
-  //statements
-}</code>
-However, object attributes are not protected, so the following statement is executed without problems.
-<code>const MY_OBJECT = {"key": "value"};
-MY_OBJECT.key = "otherValue";</code>
+          <code><xmp><li> <p></p></li></xmp></code>
+      However, object attributes are not protected, so the following statement is executed without problems.
+          <code>const MY_OBJECT = {"key": "value"};
+            MY_OBJECT.key = "otherValue";</code>
     </article>
     </section>
   <section class="main-section" id="Data_types">
@@ -357,5 +349,5 @@ A function definition (also called a function declaration, or function statement
     </article>
     </section>
 </main>
-
+-->
 </html>
